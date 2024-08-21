@@ -1,0 +1,57 @@
+.container {
+    position: relative;
+    text-align: center;
+    font-family: 'Arial, sans-serif';
+}
+
+.background-image {
+    position: relative;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/adventurebuddy-tab-web.appspot.com/o/bg%20nanital.png?alt=media&token=54ea1907-71aa-47f5-9a89-e3ea797df57a); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust based on your preference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location {
+    color: white;
+    font-size: 8rem; /* Adjust based on your preference */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Mochiy Pop One";
+}
+
+.itinerary-container {
+    position: absolute;
+    bottom: -20px; /* Adjust to control overlap */
+    left: 20%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    /*border: 2px solid #ccc;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+    width: 30%;
+    height: 20px;
+}
+
+.itinerary {
+    margin-top: -10px;
+    font-size: 2rem; /* Adjust based on your preference */
+    font-weight: bold;
+    font-family: "Monda";
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .background-image{
+        width: 100%;
+    }
+    .container h1{
+        font-size: 5rem;
+    }
+    .itinerary-container{
+        margin-left: 30%;
+    }
+}

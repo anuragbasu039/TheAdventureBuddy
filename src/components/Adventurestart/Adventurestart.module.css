@@ -1,0 +1,151 @@
+.adventure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    height: 500px;
+    position: relative; /* Needed for positioning the ::before pseudo-element */
+    margin-top: 10%;
+
+}
+
+.adventure-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/adventurebuddy-tab-web.appspot.com/o/Linkbg.png?alt=media&token=ca5841c6-973b-49da-8767-76ed7daf051b');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Adjust the opacity value as needed */
+    z-index: -1; /* Ensure the background image stays behind the content */
+}
+
+.Text-section {
+    margin-left: -550px;
+    z-index: 1; /* Ensure the text is above the background image */
+}
+
+.Text-section p {
+    font-size: 5.5rem;
+    margin: 0;
+    margin-left: 0; /* Ensure no left margin */
+    text-align: left; /* Align text to the left */
+    font-family: 'Monda';
+    color: black;
+}
+
+.Text-section h1 {
+    font-size: 5.5rem;
+    margin: 0;
+    margin-left: 0; /* Ensure no left margin */
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    font-family: 'Monda';
+    color: black;
+}
+
+.image-section {
+    margin-top: 2rem;
+}
+
+.linktree-image {
+    max-width: 80%;
+    height: auto;
+    cursor: pointer;
+    margin-left: 70%;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    .Text-section p {
+        font-size: 2rem;
+    }
+
+    .Text-section h1 {
+        font-size: 3.5rem;
+    }
+    .linktree-image{
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .linktree-image{
+        margin-left: 60%;
+    }
+}
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .linktree-image{
+        margin-left: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .Text-section {
+        margin-left: -150px;
+    }
+
+    .Text-section p {
+        font-size: 1.75rem;
+    }
+
+    .Text-section h1 {
+        font-size: 4rem;
+    }
+
+    .linktree-image {
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .adventure-container {
+        height: auto; /* Adjust height for smaller screens */
+        margin-top: 5%;
+    }
+
+    .Text-section {
+        margin-left: 0;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .Text-section p,
+    .Text-section h1 {
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .Text-section p {
+        font-size: 1.5rem;
+    }
+
+    .Text-section h1 {
+        font-size: 3rem;
+    }
+
+    .linktree-image {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .adventure-container {
+        padding: 1rem;
+    }
+
+    .Text-section p {
+        font-size: 1.25rem;
+    }
+
+    .Text-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .linktree-image {
+        margin-top: 30px;
+    }
+}

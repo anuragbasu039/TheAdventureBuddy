@@ -1,0 +1,134 @@
+.adventure-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    /* background-color: #f9f9f9; */
+    margin-top: 10%;
+}
+
+.text-sections {
+    max-width: 50%;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.text-sections p {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #777;
+    font-family: 'Monda';
+}
+
+.text-sections h1 {
+    font-size: 5.5rem;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    font-family: 'Monda';
+}
+
+.video-container {
+    max-width: 50%;
+}
+
+.video-container iframe {
+    width: 580px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (min-width: 320px) and (max-width: 767px) {
+    .video-container iframe{
+        margin-left: 30px;
+    }
+}
+@media (max-width: 768px) {
+
+    .adventure-containers {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10%;
+        padding: 1rem;
+    }
+
+    .text-sections, .video-container {
+        max-width: 20%;
+    }
+
+    .text-sections {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .text-sections p {
+        font-size: 1.5rem;
+    }
+
+    .text-sections h1 {
+        font-size: 3rem;
+    }
+    .text-sections p {
+        font-size: 2.5rem;
+        margin-left: 20%;
+    }
+
+    .video-container iframe {
+        width: 40vh;
+        height: auto;
+        margin-left: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .adventure-containers{
+        width: 70%;
+    }
+    .text-sections h1{
+        width: 100%;
+        margin-left: 30%;
+        font-size: 5rem;
+    }
+    .video-container iframe{
+        margin-left: 30%;
+        width: 80vh;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .adventure-containers{
+        width: 90%;
+    }
+    .text-sections h1{
+        width: 100%;
+        margin-left: 1%;
+        font-size: 4rem;
+    }
+    .video-container iframe{
+        width: 50vh;
+        height: 30vh;
+        margin-left: 10%;
+    }
+}
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .text-sections h1 {
+        font-size: 10rem;
+    }
+    .video-container iframe{
+        width: 80vh;
+        height: 30vh;
+       margin-left: -20%;
+    }
+}
+@media (min-width: 2561px) and (max-width: 2687px) {
+    .text-sections h1{
+        font-size: 10rem;
+    }
+    .video-container iframe{
+        margin-left: -20%;
+        width: 80vh;
+        height: 30vh;
+    }
+}
+    
+
+

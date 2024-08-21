@@ -1,0 +1,163 @@
+/* General styles */
+.master-pioneer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.LOGO {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.master-pioneer h1 {
+    margin-top: -20px;
+}
+
+.trip {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.trips {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trips:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trips img {
+    margin-top: 20px;
+    width: 80%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.trips h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.trips p {
+    color: gray;
+    font-size: 0.9em;
+}
+
+.detail {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.detail span {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive design for large tablets and smaller screens */
+@media (max-width: 1024px) {
+    .trip {
+        flex-direction: row;
+        gap: 50px; /* Reduce gap for smaller screens */
+    }
+
+    .trips {
+        width: 180px;
+    }
+
+    .trips img {
+        width: 70%;
+        height: 100px;
+        border-radius: 10px;
+    }
+}
+
+/* Responsive design for medium tablets and smaller screens */
+@media (max-width: 768px) {
+    .trip {
+        gap: 30px; /* Further reduce gap */
+    }
+
+    .trips {
+        width: 160px;
+    }
+
+    .trips img {
+        width: 60%;
+        height: 90px;
+        border-radius: 10px;
+    }
+}
+
+/* Additional responsive design for small screens */
+@media (max-width: 480px) {
+    .trip {
+        flex-direction: row;
+        gap: 20px; /* Further reduce gap */
+    }
+
+    .trips {
+        width: 140px;
+    }
+
+    .trips img {
+        width: 50%;
+        height: 80px;
+    }
+
+    .trips h2 {
+        font-size: 1em;
+    }
+
+    .trips p {
+        font-size: 0.8em;
+    }
+
+    .detail {
+        flex-direction: row;
+        font-size: 1em;
+    }
+}
+
+/* Additional responsive design for very small screens */
+@media (max-width: 320px) {
+
+    .trip {
+        gap: 10px; /* Further reduce gap */
+    }
+
+    .trips {
+        width: 120px;
+    }
+
+    .trips img {
+        width: 40%;
+        height: 70px;
+        border-radius: 10px;
+    }
+
+    .trips h2 {
+        font-size: 0.9em;
+    }
+
+    .trips p {
+        font-size: 0.7em;
+    }
+
+    .detail {
+        font-size: 0.9em;
+    }
+}

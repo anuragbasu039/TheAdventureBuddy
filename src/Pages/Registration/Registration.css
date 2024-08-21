@@ -1,0 +1,1371 @@
+/*!* src/RegistrationForm.css *!*/
+
+/* General Form Styling */
+.registration-form {
+    width: 80%;
+    margin: 0 auto;
+    font-family: "Monda";
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #F8EEEE;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Registerform.css */
+/* Add your existing styles here */
+
+.error {
+    color: red;
+    font-size: 0.875em ;
+    .registration-form {
+        width: 80%;
+        margin: 0 auto;
+        font-family: "Monda";
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #F8EEEE;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for error messages */
+    .error {
+        color: red;
+        font-size: 0.875em;
+        margin-top: 5px;
+        display: block;
+    }
+
+    /* Ensure form groups maintain consistent spacing */
+    .form-group,
+    .form-group-venue,
+    .form-group-date,
+    .form-group-camp,
+    .form-group-fullname,
+    .form-group-guardian,
+    .form-group-blood,
+    .form-group-dob,
+    .form-group-age,
+    .form-group-class,
+    .form-group-section,
+    .form-group-whatapp,
+    .form-group-mobile,
+    .form-group-address,
+    .form-group-city,
+    .form-group-state,
+    .form-group-pincode,
+    .form-group-aadhar,
+    .form-group-gender,
+    .form-group-camp,
+    .form-group-address,
+    .form-group-city,
+    .form-group-state,
+    .form-group-pincode,
+    .form-group-disease,
+    .form-group-agree {
+        margin-bottom: 15px;
+    }
+
+    /* Ensure input fields take full width */
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    /* Styling for form sections */
+    .form-section {
+        margin-bottom: 30px;
+    }
+
+    .details {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust layout for better visual appeal */
+    .form-group-gender label,
+    .form-group-gender input[type="radio"] {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .gender-group-gender {
+        margin-bottom: 20px;
+    }
+
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .upload {
+        display: block;
+    }
+
+    .btn button {
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Header Styling */
+    .registration-form h1,
+    .registration-form p {
+        color: black;
+        text-align: center;
+    }
+
+    .registration-form h1 {
+        margin-bottom: 10px;
+    }
+
+    .registration-form p {
+        font-size: 14px;
+    }
+
+    .details {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* Upload Section */
+    .upload {
+        margin-left: 350%;
+    }
+
+    /* Form Sections */
+    .form-section {
+        margin-bottom: 20px;
+    }
+
+    .form-section h2 {
+        background-color: #004080;
+        color: #fff;
+        border-radius: 5px 5px 0 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Profile Picture Styling */
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
+        margin-left: 900px;
+    }
+
+    /* Form Group Styling */
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .form-group label {
+        margin-right: 10px;
+    }
+
+    .form-group input {
+        flex: 2;
+        width: 150vh;
+        margin-left: 10px;
+        padding: 5px;
+    }
+
+    /* Specific Form Groups */
+    .form-group-venue input {
+        width: 146vh;
+        margin-left: 70px;
+        padding: 5px;
+    }
+
+    .form-group-date input {
+        margin-top: 20px;
+        margin-left: 80px;
+        padding: 5px;
+        width: 200px;
+    }
+
+    .form-group-date span {
+        margin-left: 50px;
+    }
+
+    .form-group-camp input {
+        width: 850px;
+        margin-left: 40px;
+        margin-top: 20px;
+        padding: 5px;
+    }
+
+    .form-group-fullname input {
+        width: 700px;
+        margin-left: 80px;
+        padding: 5px;
+        margin-top: -90px;
+    }
+
+    .form-group-guardian input {
+        width: 700px;
+        margin-left: 40px;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    .form-group-blood input {
+        width: 700px;
+        margin-left: 60px;
+        padding: 5px;
+    }
+
+    /* Gender Group Styling */
+    .gender-group-gender {
+        margin-top: -30px;
+        margin-right: 500px;
+        padding: 5px;
+    }
+
+    .gender-group-gender input {
+        margin: 50px;
+    }
+
+    .form-group-dob {
+        margin-top: 20px;
+        padding: 5px;
+    }
+
+    .form-group-dob input {
+        width: 400px;
+        margin-left: 50px;
+    }
+
+    .form-group-age {
+        margin-top: 4px;
+        padding: 5px;
+    }
+
+    .form-group-age label {
+        margin-right: 125px;
+    }
+
+    .form-group-age input {
+        margin-right: 27px;
+    }
+
+    .form-group-class {
+        margin-top: 20px;
+        padding: 5px;
+    }
+
+    .form-group-class input {
+        width: 500px;
+        padding: 5px;
+        margin-left: 105px;
+    }
+
+    .form-group-section {
+        margin-top: 4px;
+        padding: 5px;
+    }
+
+    .form-group-section label {
+        margin-right: 100px;
+    }
+
+    .form-group-section input {
+        margin-right: 27px;
+    }
+
+    .form-group-whatapp {
+        margin-top: 20px;
+        padding: 5px;
+    }
+
+    .form-group-whatapp input {
+        width: 500px;
+        padding: 5px;
+        margin-left: 45px;
+    }
+
+    .form-group-mobile {
+        margin-top: 4px;
+        padding: 5px;
+    }
+
+    .form-group-mobile input {
+        margin-right: 27px;
+    }
+
+    .form-group-mobile label {
+        margin-right: 80px;
+    }
+
+    .form-group-address {
+        margin-top: 20px;
+    }
+
+    .form-group-address textarea {
+        width: 138vh;
+        margin-left: 150px;
+        margin-top: -20px;
+    }
+
+    .form-group-city {
+        margin-top: 20px;
+        padding: 5px;
+    }
+
+    .form-group-city input {
+        padding: 5px;
+        width: 500px;
+        margin-left: 111px;
+    }
+
+    .form-group-state {
+        margin-top: 4px;
+        padding: 5px;
+    }
+
+    .form-group-state label {
+        margin-right: 120px;
+    }
+
+    .form-group-state input {
+        margin-right: 20px;
+    }
+
+    .profile-pic {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .form-group-pincode {
+        margin-top: 20px;
+        padding: 5px;
+    }
+
+    .form-group-pincode input {
+        padding: 5px;
+        width: 500px;
+        margin-left: 80px;
+    }
+
+    .form-group-aadhar {
+        margin-top: 4px;
+        padding: 5px;
+    }
+
+    .form-group-aadhar label {
+        margin-right: 80px;
+    }
+
+    .form-group-aadhar input {
+        margin-right: 20px;
+    }
+
+    .disease input {
+        padding: 5px;
+        width: 170vh;
+    }
+
+    .agree-group {
+        display: flex;
+        align-items: flex-start;
+        margin: 10px 0;
+        font-family: 'Monda';
+    }
+
+    .agree-group input {
+        margin-right: 10px;
+    }
+
+    .btns button {
+        margin-left: 35%;
+        width: 30%;
+        padding: 10px;
+        border: none;
+        border-radius: 50px;
+        background-color: #004080;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #003366;
+    }
+
+    /* Responsive Styling for Tablets */
+    @media (max-width: 1024px) {
+        .registration-form {
+            width: 90%;
+            padding: 15px;
+        }
+
+        .profile-pic img {
+            width: 80px;
+            height: 80px;
+            margin-left: 0;
+        }
+
+        .form-group {
+            display: block;
+            align-items: flex-start;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .form-group-venue input,
+        .form-group-date input,
+        .form-group-camp input,
+        .form-group-fullname input,
+        .form-group-guardian input,
+        .form-group-blood input,
+        .form-group-dob input,
+        .form-group-age input,
+        .form-group-class input,
+        .form-group-section input,
+        .form-group-whatapp input,
+        .form-group-mobile input,
+        .form-group-address textarea,
+        .form-group-city input,
+        .form-group-state input,
+        .form-group-pincode input,
+        .form-group-aadhar input,
+        .disease input {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .form-group-dob input {
+            width: 100%;
+        }
+
+        .agree-group {
+            flex-direction: column;
+        }
+
+        .btn button {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .upload {
+            margin-left: 0;
+        }
+
+        .form-section h2 {
+            font-size: 1.2em;
+        }
+    }
+
+    /* Responsive Styling for Mobile Devices */
+    @media (max-width: 768px) {
+        .registration-form {
+            width: 95%;
+            padding: 10px;
+        }
+
+        .profile-pic img {
+            width: 60px;
+            height: 60px;
+            margin-left: 0;
+        }
+
+        .form-group {
+            display: block;
+            align-items: flex-start;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .form-group-venue input,
+        .form-group-date input,
+        .form-group-camp input,
+        .form-group-fullname input,
+        .form-group-guardian input,
+        .form-group-blood input,
+        .form-group-dob input,
+        .form-group-age input,
+        .form-group-class input,
+        .form-group-section input,
+        .form-group-whatapp input,
+        .form-group-mobile input,
+        .form-group-address textarea,
+        .form-group-city input,
+        .form-group-state input,
+        .form-group-pincode input,
+        .form-group-aadhar input,
+        .disease input {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .form-group-dob input {
+            width: 100%;
+        }
+
+        .agree-group {
+            flex-direction: column;
+        }
+
+        .btn button {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .upload {
+            margin-left: 0;
+        }
+
+        .form-section h2 {
+            font-size: 1em;
+        }
+    }
+
+    /* Responsive Styling for Extra Small Devices */
+    @media (max-width: 480px) {
+        .registration-form {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .profile-pic img {
+            width: 50px;
+            height: 50px;
+            margin-left: 0;
+        }
+
+        .form-group {
+            display: block;
+            align-items: flex-start;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .form-group-venue input,
+        .form-group-date input,
+        .form-group-camp input,
+        .form-group-fullname input,
+        .form-group-guardian input,
+        .form-group-blood input,
+        .form-group-dob input,
+        .form-group-age input,
+        .form-group-class input,
+        .form-group-section input,
+        .form-group-whatapp input,
+        .form-group-mobile input,
+        .form-group-address textarea,
+        .form-group-city input,
+        .form-group-state input,
+        .form-group-pincode input,
+        .form-group-aadhar input,
+        .disease input {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .form-group-dob input {
+            width: 100%;
+        }
+
+        .agree-group {
+            flex-direction: column;
+        }
+
+        .btn button {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .upload {
+            margin-left: 0;
+        }
+
+        .form-section h2 {
+            font-size: 0.8em;
+        }
+    }
+: 5px;
+    display: block;
+}
+
+/* Ensure form groups maintain consistent spacing */
+.form-group,
+.form-group-venue,
+.form-group-date,
+.form-group-camp,
+.form-group-fullname,
+.form-group-guardian,
+.form-group-blood,
+.form-group-dob,
+.form-group-age,
+.form-group-class,
+.form-group-section,
+.form-group-whatapp,
+.form-group-mobile,
+.form-group-address,
+.form-group-city,
+.form-group-state,
+.form-group-pincode,
+.form-group-aadhar,
+.form-group-gender,
+.form-group-camp,
+.form-group-address,
+.form-group-city,
+.form-group-state,
+.form-group-pincode,
+.form-group-disease,
+.form-group-agree {
+    margin-bottom: 15px;
+}
+
+/* Ensure input fields take full width */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Styling for form sections */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.details {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Adjust layout for better visual appeal */
+.form-group-gender label,
+.form-group-gender input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.gender-group-gender {
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    /*border-radius: 0%;*/
+    margin-bottom: 10px;
+}
+
+.upload {
+    display: block;
+}
+
+.btn button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    background-color: #0056b3;
+}
+
+/* Header Styling */
+.registration-form h1,
+.registration-form p {
+    color: black;
+    text-align: center;
+}
+
+.registration-form h1 {
+    margin-bottom: 10px;
+}
+
+.registration-form p {
+    font-size: 14px;
+}
+
+.details {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Upload Section */
+.upload {
+    margin-left: 350%;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    background-color: #004080;
+    color: #fff;
+    /*padding: 10px;*/
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Profile Picture Styling */
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    margin-left: 900px;
+}
+
+/* Form Group Styling */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form-group label {
+    margin-right: 10px;
+}
+
+.form-group input {
+    flex: 2;
+    width: 150vh;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* Specific Form Groups */
+.form-group-venue input {
+    width: 146vh;
+    margin-left: 70px;
+    padding: 5px;
+}
+
+.form-group-date input {
+    margin-top: 20px;
+    margin-left: 80px;
+    padding: 5px;
+    width: 200px;
+}
+
+.form-group-date span {
+    margin-left: 50px;
+}
+
+.form-group-camp input {
+    width: 850px;
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.form-group-fullname input {
+    width: 700px;
+    margin-left: 80px;
+    padding: 5px;
+    margin-top: -90px;
+}
+
+.form-group-guardian input {
+    width: 700px;
+    margin-left: 40px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.form-group-blood input {
+    width: 700px;
+    margin-left: 60px;
+    padding: 5px;
+}
+
+/* Gender Group Styling */
+.gender-group-gender {
+    /*margin-right: 500px;*/
+    padding: 5px;
+}
+
+.gender-group-gender input {
+    margin-left: 90px;
+    margin-top: 20px;
+    /*margin: 50px;*/
+}
+
+.form-group-dob {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.form-group-dob input {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.form-group-age {
+    margin-top: 4px;
+    padding: 5px;
+}
+
+.form-group-age label {
+    margin-right: 125px;
+}
+
+.form-group-age input {
+    margin-right: 27px;
+}
+
+.form-group-class {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.form-group-class input {
+    width: 500px;
+    padding: 5px;
+    margin-left: 105px;
+}
+
+.form-group-section {
+    margin-top: 4px;
+    padding: 5px;
+}
+
+.form-group-section label {
+    margin-right: 100px;
+}
+
+.form-group-section input {
+    margin-right: 27px;
+}
+
+.form-group-whatapp {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.form-group-whatapp input {
+    width: 500px;
+    padding: 5px;
+    margin-left: 45px;
+}
+
+.form-group-mobile {
+    margin-top: 4px;
+    padding: 5px;
+}
+
+.form-group-mobile input {
+    margin-right: 27px;
+}
+
+.form-group-mobile label {
+    margin-right: 80px;
+}
+
+.form-group-address {
+    margin-top: 20px;
+}
+
+.form-group-address textarea {
+    width: 138vh;
+    margin-left: 150px;
+    margin-top: -20px;
+}
+
+.form-group-city {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.form-group-city input {
+    padding: 5px;
+    width: 500px;
+    margin-left: 111px;
+}
+
+.form-group-state {
+    margin-top: 4px;
+    padding: 5px;
+}
+
+.form-group-state label {
+    margin-right: 120px;
+}
+
+.form-group-state input {
+    margin-right: 20px;
+}
+
+.profile-pic {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form-group-pincode {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.form-group-pincode input {
+    padding: 5px;
+    width: 500px;
+    margin-left: 80px;
+}
+
+.form-group-aadhar {
+    margin-top: 4px;
+    padding: 5px;
+}
+
+.form-group-aadhar label {
+    margin-right: 80px;
+}
+
+.form-group-aadhar input {
+    margin-right: 20px;
+}
+
+.disease input {
+    padding: 5px;
+    width: 170vh;
+}
+
+.agree-group {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+    font-family: 'Monda';
+}
+
+.agree-group input {
+    margin-right: 10px;
+}
+
+.btns button {
+    margin-left: 35%;
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #004080;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366;
+}
+@media (min-width: 320px) and (max-width: 767px){
+    #male{
+        margin-left: 30%;
+    }
+    #female{
+        margin-left: 50%;
+    }
+    #other{
+        margin-left: 50%;
+    }
+}
+
+@media(max-width: 768px) {
+    .registration-form {
+        width: 80%;
+        padding:10px;
+    }
+
+    .profile-pic img {
+        margin-left: 0;
+    }
+
+    .form-group {
+        display: block;
+        align-items: flex-start;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-group-venue input,
+    .form-group-date input,
+    .form-group-camp input,
+    .form-group-fullname input,
+    .form-group-guardian input,
+    .form-group-blood input,
+    .form-group-dob input,
+    .form-group-age input,
+    .form-group-class input,
+    .form-group-section input,
+    .form-group-whatapp input,
+    .form-group-mobile input,
+    .form-group-address textarea,
+    .form-group-city input,
+    .form-group-state input,
+    .form-group-pincode input,
+    .form-group-aadhar input,
+    .disease input {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .form-group-dob input {
+        width: 100%;
+    }
+
+    .agree-group {
+        flex-direction: column;
+    }
+
+    .btn button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .upload {
+        margin-left: 0;
+    }
+
+    .form-section h2 {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+    .registration-form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .profile-pic img {
+        margin-left: 0;
+    }
+
+    .form-group {
+        display: block;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-group-venue input,
+    .form-group-date input,
+    .form-group-camp input,
+    .form-group-fullname input,
+    .form-group-guardian input,
+    .form-group-blood input,
+    .form-group-dob input,
+    .form-group-age input,
+    .form-group-class input,
+    .form-group-section input,
+    .form-group-whatapp input,
+    .form-group-mobile input,
+    .form-group-address textarea,
+    .form-group-city input,
+    .form-group-state input,
+    .form-group-pincode input,
+    .form-group-aadhar input,
+    .disease input {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .form-group-dob input {
+        width: 100%;
+    }
+
+    .agree-group {
+        flex-direction: column;
+    }
+
+    .btn button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .upload {
+        margin-left: 60%;
+    }
+
+    .form-section h2 {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .registration-form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .profile-pic img {
+        margin-left: 0;
+    }
+
+    .form-group {
+        display: block;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-group-venue input,
+    .form-group-date input,
+    .form-group-camp input,
+    .form-group-fullname input,
+    .form-group-guardian input,
+    .form-group-blood input,
+    .form-group-dob input,
+    .form-group-age input,
+    .form-group-class input,
+    .form-group-section input,
+    .form-group-whatapp input,
+    .form-group-mobile input,
+    .form-group-address textarea,
+    .form-group-city input,
+    .form-group-state input,
+    .form-group-pincode input,
+    .form-group-aadhar input,
+    .disease input {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .form-group-dob input {
+        width: 100%;
+    }
+
+    .agree-group {
+        flex-direction: column;
+    }
+
+    .btn button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .upload {
+        margin-left: 70%;
+    }
+
+    .form-section h2 {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 1441px) and (max-width: 2560px){
+    .registration-form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .profile-pic img {
+        margin-left: 0;
+    }
+
+    .form-group {
+        display: block;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 99%;
+        /*margin-left: 20%;*/
+    }
+
+    .form-group-venue input,
+    .form-group-date input,
+    .form-group-camp input,
+    .form-group-fullname input,
+    .form-group-guardian input,
+    .form-group-blood input,
+    .form-group-dob input,
+    .form-group-age input,
+    .form-group-class input,
+    .form-group-section input,
+    .form-group-whatapp input,
+    .form-group-mobile input,
+    .form-group-address textarea,
+    .form-group-city input,
+    .form-group-state input,
+    .form-group-pincode input,
+    .form-group-aadhar input,
+    .disease input {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .form-group-dob input {
+        width: 100%;
+    }
+
+    .agree-group {
+        flex-direction: column;
+    }
+
+    .btn button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .upload {
+        margin-left: 80%;
+    }
+
+    .form-section h2 {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 2561px) and (max-width: 3288px){
+    .registration-form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .profile-pic img {
+        margin-left: 0;
+    }
+
+    .form-group {
+        display: block;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-group-venue input,
+    .form-group-date input,
+    .form-group-camp input,
+    .form-group-fullname input,
+    .form-group-guardian input,
+    .form-group-blood input,
+    .form-group-dob input,
+    .form-group-age input,
+    .form-group-class input,
+    .form-group-section input,
+    .form-group-whatapp input,
+    .form-group-mobile input,
+    .form-group-address textarea,
+    .form-group-city input,
+    .form-group-state input,
+    .form-group-pincode input,
+    .form-group-aadhar input,
+    .disease input {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .form-group-dob input {
+        width: 100%;
+    }
+
+    .agree-group {
+        flex-direction: column;
+    }
+
+    .btn button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .upload {
+        margin-left: 80%;
+    }
+
+    .form-section h2 {
+        font-size: 1.2em;
+    }
+}
+
+
+

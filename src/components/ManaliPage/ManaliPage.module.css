@@ -1,0 +1,58 @@
+.manali {
+    position: relative;
+    text-align: center;
+    font-family: 'Arial, sans-serif';
+}
+
+.background-image-manali {
+    position: relative;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/adventurebuddy-tab-web.appspot.com/o/bg%20manali.png?alt=media&token=3a8db436-7acd-4b55-a2fb-75a8d1a5c8da); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust based on your preference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location {
+    color: white;
+    font-size: 8rem; /* Adjust based on your preference */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Mochiy Pop One";
+}
+
+.itinerary-container-manali {
+    position: absolute;
+    bottom: -20px; /* Adjust to control overlap */
+    left: 20%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    /*border: 2px solid #ccc;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+    width: 30%;
+    height: 20px;
+}
+
+.itinerary-manali {
+    margin-top: -10px;
+    font-size: 2rem; /* Adjust based on your preference */
+    font-weight: bold;
+    font-family: "Monda";
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .background-image-manali{
+        width: 100%;
+    }
+    .manali h1{
+        font-size: 5rem;
+    }
+    .itinerary-container-manali{
+        margin-left: 30%;
+    }
+    
+}

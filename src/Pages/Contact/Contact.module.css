@@ -1,0 +1,134 @@
+/* Ensure margin and padding are reset, and flexbox is applied */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the navbar */
+
+/* Container for the contact page content */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    flex: 1; /* This ensures the container takes the remaining space below the navbar */
+    box-sizing: border-box;
+}
+
+/* Styling for the contact form */
+#contact-form {
+    margin-bottom: 10%;
+    width: 45%;
+}
+
+#contact-form h2 {
+    font-family: 'Monda';
+    font-size: 2.5rem;
+    color: #2e9cca;
+}
+
+#contact-form p {
+    font-size: 1.5rem;
+    font-family: 'Monda';
+    margin-bottom: 20px;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    border-color: #2e9cca;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #6E9B40; /* Change border color to green on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #2e9cca;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #2e9cca;
+}
+
+/* Styling for the contact image and info */
+#contact-image {
+    width: 43%;
+    text-align: center;
+}
+
+#contact-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+#contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#contact-info p {
+    margin: 5px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+
+    #contact-form, .contact-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #contact-form {
+        order: 1; /* Ensure contact form appears first */
+    }
+
+    #contact-image {
+        order: 2; /* Ensure contact image appears second */
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        padding: 15px;
+    }
+
+    #contact-form button {
+        padding: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .contact-image img{
+        width: 100%;
+    }
+    .contact-container{
+        width: 100%
+    }
+    
+}

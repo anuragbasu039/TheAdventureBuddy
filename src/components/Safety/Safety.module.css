@@ -1,0 +1,161 @@
+/* Base styles */
+.containers {
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 5rem;
+  width: 100%;
+  color: gray;
+  font-family: 'Monda';
+}
+.highlight {
+  color: black;
+  font-weight: bold;
+  font-size: 90px;
+  transition: all .8s ease;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
+  border-radius: 20px;
+  padding: 1rem;
+  gap: 100px; /* Create a gap between images */
+}
+
+.image {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.image1 {
+  padding-right: 100px; /* Adjust the value as needed */
+  border-right: 2px  dotted; /* Ensure border width and style are specified */
+}
+
+/* Media query for large screens */
+@media (max-width: 1200px) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .highlight {
+    font-size: 70px;
+  }
+}
+
+
+/* Media query for medium screens */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .highlight {
+    font-size: 60px;
+  }
+  .image1 {
+    padding-right: 0;  /* Remove right padding for small screens */
+    padding-bottom: 20px;  /* Add bottom padding */
+    border-right: none;  /* Remove right border */
+    border-bottom: 2px dotted;  /* Add bottom border */
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1.1);
+    border-right: none;
+    border-radius: 10px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .highlight {
+    font-size: 50px;
+  }
+  .image1 {
+    padding-right: 0;  /* Remove right padding for small screens */
+    padding-bottom: 20px;  /* Add bottom padding */
+    border-right: none;  /* Remove right border */
+    border-bottom: 2px dotted;  /* Add bottom border */
+  }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 576px) {
+  .content {
+    padding: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .highlight {
+    font-size: 40px;
+  }
+  .image1 {
+    padding-right: 0;  /* Remove right padding for small screens */
+    padding-bottom: 20px;  /* Add bottom padding */
+    border-right: none;  /* Remove right border */
+    border-bottom: 2px dotted;  /* Add bottom border */
+  }
+}
+
+/* Orientation-specific media queries */
+/* Portrait orientation */
+@media screen and (orientation: portrait) {
+  .content {
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1.1);
+    border-right: none;
+    border-radius: 10px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .image1 {
+    padding-right: 0;  /* Remove right padding for small screens */
+    padding-bottom: 20px;  /* Add bottom padding */
+    border-right: none;  /* Remove right border */
+    border-bottom: 2px dotted;  /* Add bottom border */
+  }
+  .image1 {
+    padding-right: 0;  /* Remove right padding for small screens */
+    padding-bottom: 20px;  /* Add bottom padding */
+    border-right: none;  /* Remove right border */
+    border-bottom: 2px dotted;  /* Add bottom border */
+  }
+}
+
+/* Landscape orientation */
+@media screen and (orientation: landscape) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .highlight {
+    font-size: 80px;
+  }
+
+  .content {
+    margin-left: 10%;
+    width: 80%;
+    flex-direction: row;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
+    border-radius: 20px;
+  }
+}

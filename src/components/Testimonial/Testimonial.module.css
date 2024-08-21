@@ -1,0 +1,236 @@
+/* General styles */
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 100vh;
+    background-color: #f9f9f9;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10%;
+    position: relative; /* Ensure it works well with absolute positioning inside */
+}
+
+.text-contents p {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    justify-content: center;
+    text-align: center;
+    margin-left: 100px;
+    font-family: 'Monda';
+}
+
+.image-slider {
+    width: 30%;
+    height: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
+    margin-right: 200px;
+}
+
+.slick-slide img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+/* Media queries for various devices */
+
+/* Width 320px to 374px */
+@media (min-width: 320px) and (max-width: 374px) {
+    .testimonial-container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding: 1rem; /* Reduce padding */
+        margin-top: 5%;
+    }
+
+    .text-contents p {
+        font-size: 1.5rem; /* Adjust font size */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add space below text */
+    }
+
+    .image-slider {
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+/* Width 375px to 424px */
+@media (min-width: 375px) and (max-width: 424px) {
+    .testimonial-container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding: 1rem; /* Reduce padding */
+        margin-top: 5%;
+    }
+
+    .text-contents p {
+        font-size: 2rem; /* Adjust font size */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add space below text */
+    }
+
+    .image-slider {
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+/* Width 425px to 767px */
+@media (min-width: 425px) and (max-width: 767px) {
+    .testimonial-container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding: 1rem; /* Reduce padding */
+        margin-top: 5%;
+    }
+
+    .text-contents p {
+        font-size: 2.5rem; /* Adjust font size */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add space below text */
+    }
+
+    .image-slider {
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+/* Width 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .testimonial-container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding: 1rem; /* Reduce padding */
+        margin-top: 5%;
+    }
+
+    .text-contents p {
+        font-size: 3rem; /* Adjust font size */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 1rem; /* Add space below text */
+    }
+
+    .image-slider {
+        margin-left: 40%;
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+/* Width 1024px to 1439px */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .testimonial-container {
+        flex-direction: row; /* Stack items horizontally */
+        height: 100vh; /* Full viewport height */
+        padding: 2rem; /* Default padding */
+        margin-top: 10%;
+    }
+
+    .text-contents p {
+        font-size: 3rem; /* Adjust font size */
+        margin-left: 100px; /* Default left margin */
+    }
+
+    .image-slider {
+        width: 30%; /* Default width */
+        height: 80%; /* Default height */
+        margin-right: 200px; /* Default right margin */
+    }
+}
+
+/* Width 1440px to 2559px */
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .testimonial-container {
+        flex-direction: row; /* Stack items horizontally */
+        height: 100vh; /* Full viewport height */
+        padding: 2rem; /* Default padding */
+        margin-top: 10%;
+    }
+
+    .text-contents p {
+        font-size: 3.5rem; /* Adjust font size */
+        margin-left: 100px; /* Default left margin */
+    }
+
+    .image-slider {
+        width: 30%; /* Default width */
+        height: 80%; /* Default height */
+        margin-right: 200px; /* Default right margin */
+    }
+}
+
+/* Width 2560px to 2687px */
+@media (min-width: 2560px) and (max-width: 2687px) {
+    .testimonial-container {
+        flex-direction: row; /* Stack items horizontally */
+        height: 100vh; /* Full viewport height */
+        padding: 2rem; /* Default padding */
+        margin-top: 10%;
+    }
+
+    .text-contents p {
+        font-size: 4rem; /* Adjust font size */
+        margin-left: 100px; /* Default left margin */
+    }
+
+    .image-slider {
+        width: 30%; /* Default width */
+        height: 80%; /* Default height */
+        margin-right: 200px; /* Default right margin */
+    }
+}
+
+/* Orientation-specific media queries */
+
+/* Portrait orientation */
+@media screen and (orientation: portrait) {
+    .testimonial-container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .text-contents p {
+        font-size: 2rem; /* Adjust font size */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .image-slider {
+        width: 100%; /* Full width */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+/* Landscape orientation */
+@media screen and (orientation: landscape) {
+    .testimonial-container {
+        height: 100vh; /* Full viewport height */
+        padding: 2rem; /* Default padding */
+    }
+
+    .text-contents p {
+        font-size: 3rem; /* Adjust font size */
+        margin-left: 100px; /* Reset left margin */
+    }
+
+    .image-slider {
+        width: 30%; /* Default width */
+        margin-right: 200px; /* Default margin */
+    }
+}

@@ -1,0 +1,158 @@
+/* Default styles (for mobile screens) */
+.count {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow items to wrap if they don't fit in a row */
+    background-color: #6E9B40;
+    /* margin-top: -800px; */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between children */
+    align-items: center; /* Center align children horizontally */
+    margin: 10px 50px;
+    text-align: center;
+    font-size: 50px;
+    max-width: 180px; /* Set a maximum width for the items */
+    color: white;
+    font-family: 'Monda';
+}
+
+.number {
+    font-size: 50px;
+    margin-bottom: 10px; /* Add some space between the number and the text */
+}
+
+.text {
+    font-size: 20px; /* Adjust the font size for the text as needed */
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .count {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin-top: 50px;
+    }
+
+    .item {
+        margin: 5px 0;
+        font-size: 40px; /* Adjust font size for better readability on smaller screens */
+    }
+
+    .number {
+        font-size: 40px;
+    }
+
+    .text {
+        font-size: 16px; /* Adjust the font size for better readability on smaller screens */
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .count {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-top: 75px;
+    }
+
+    .item {
+        margin: 5px 0;
+        font-size: 45px; /* Adjust font size for better readability on smaller screens */
+    }
+
+    .number {
+        font-size: 45px;
+    }
+
+    .text {
+        font-size: 18px; /* Adjust the font size for better readability on smaller screens */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .count {
+        flex-direction: row; /* Maintain horizontal layout for medium screens */
+        justify-content: space-between;
+        margin-top: 40%;
+    }
+
+    .item {
+        margin: 10px 20px;
+        font-size: 48px;
+    }
+
+    .number {
+        font-size: 48px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .count {
+        flex-direction: row; /* Maintain horizontal layout for larger screens */
+        justify-content: space-around;
+        margin-top: 20%;
+    }
+
+    .item {
+        margin: 10px 30px;
+        font-size: 50px;
+    }
+
+    .number {
+        font-size: 50px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+    .count {
+        flex-direction: row; /* Maintain horizontal layout for larger screens */
+        justify-content: space-around;
+        margin-top: 30%;
+    }
+
+    .item {
+        margin: 10px 40px;
+        font-size: 50px;
+    }
+
+    .number {
+        font-size: 50px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2560px){
+    .count {
+        flex-direction: row; /* Maintain horizontal layout for larger screens */
+        justify-content: space-around;
+        margin-top: 30%;
+    }
+}
+@media only screen and (min-width: 2560px) and (max-width: 2687px){
+    .count{
+        flex-direction: row; /* Maintain horizontal layout for larger screens */
+        justify-content: space-around;
+        margin-top: 15%;
+    }
+}

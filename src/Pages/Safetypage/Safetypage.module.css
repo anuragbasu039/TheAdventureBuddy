@@ -1,0 +1,203 @@
+/* SafetyCards.css */
+
+/* Base Styles */
+.safety-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.safety-content p {
+    font-size: 1.2rem;
+    font-family: 'Monda';
+    margin-right: 10%;
+}
+
+.headline {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Monda';
+    font-size: 8rem;
+    color: black;
+    margin-right: 20px;
+    max-width: 60%;
+}
+
+.safety-highlight {
+    color: #ff0000;
+    margin-left: 80px;
+}
+
+.safety-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-20%);
+}
+
+.safety-image img {
+    margin-top: 150px;
+    width: 100vh;
+    height: 100vh;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices (Phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .headline {
+        font-size: 3rem;
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .safety-content {
+        margin-top: 50%;
+    }
+    .safety-content p {
+        font-size: 1rem;
+        margin-right: 0;
+    }
+    .safety-highlight {
+        margin-left: 0;
+    }
+    .safety-container h1 {
+        text-align: center;
+    }
+    .safety-image img {
+        width: 90vw;
+        height: auto;
+        margin-top: 50px;
+    }
+}
+
+/* Small Devices (Portrait Tablets and Large Phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .headline {
+        font-size: 4rem;
+        max-width: 80%;
+        margin-right: 0;
+    }
+    .safety-container {
+        margin-top: 50%;
+    }
+    .safety-container h1 {
+        margin-left: 50px;
+        text-align: center;
+    }
+    .safety-content p {
+        font-size: 1rem;
+        margin-right: 5%;
+    }
+    .safety-highlight {
+        margin-left: 20px;
+    }
+    .safety-image img {
+        width: 90vw;
+        height: auto;
+        margin-top: 100px;
+    }
+}
+
+/* Medium Devices (Landscape Tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .safety-container {
+        width: 90%;
+    }
+    .headline {
+        font-size: 6rem;
+        max-width: 70%;
+        margin-right: 10px;
+    }
+    .safety-content h1 {
+        margin-left: 15%;
+    }
+    .safety-content p {
+        width: 80%;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-left: 70px;
+        /*margin-right: 2%;*/
+    }
+    .safety-highlight {
+        margin-left: 40px;
+    }
+    .safety-image img {
+        width: 80vw;
+        height: auto;
+        margin-left: -600px;
+        margin-top: 100px;
+    }
+}
+
+/* Large Devices (Laptops/Desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .headline {
+        font-size: 7rem;
+        max-width: 60%;
+    }
+    .safety-content h1 {
+        margin-left: 5%;
+    }
+    .safety-content p {
+        font-size: 2.2rem;
+    }
+    .safety-highlight {
+        margin-left: 60px;
+    }
+    .safety-image img {
+        width: 55vw;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 140px;
+    }
+}
+
+/* Extra Large Devices (Large Laptops and Desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+    .headline {
+        font-size: 8rem;
+        max-width: 60%;
+    }
+    .safety-content p {
+        font-size: 2.2rem;
+    }
+    .safety-highlight {
+        margin-left: 80px;
+    }
+    .safety-image img {
+        width: 80vh;
+        height: 80vh;
+        margin-top: 200px;
+    }
+}
+
+/* Extra Extra Large Devices (1441px and up) */
+@media only screen and (min-width: 1441px) {
+    .headline {
+        font-size: 10rem;
+        max-width: 60%;
+    }
+    .safety-content h1 {
+        margin-left: -10%;
+    }
+    .safety-content p {
+        margin-left: -10%;
+        width: 110%;
+        font-size: 2rem;
+        margin-top: 10%;
+    }
+    .safety-highlight {
+        margin-left: 80px;
+    }
+    .safety-image img {
+        width: 100vh;
+        height: 100vh;
+        margin-left: 20%;
+        margin-top: 200px;
+    }
+}

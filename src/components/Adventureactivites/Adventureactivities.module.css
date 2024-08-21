@@ -1,0 +1,179 @@
+/* General Styling */
+.Activities {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-top: 120px; /* Adjust to avoid content hidden behind fixed header */
+}
+
+.Activities h1 {
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+
+.logo {
+    width: 150px;
+    height: 120px;
+}
+
+/* Activities Grid */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Change to 1fr to distribute space evenly */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Activity Cards */
+.activitys-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 50px
+}
+
+.activity-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.activity-card p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .Activities h1 {
+        font-size: 1.75rem;
+        margin-bottom: 80px;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to two columns */
+        gap: 20px;
+    }
+
+    .activitys-cards {
+        margin-left: 25px;
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Activities h1 {
+        font-size: 1.5rem;
+        margin-bottom: 60px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr; /* Adjust to one column */
+        /*gap: 20px;*/
+    }
+
+    .activitys-cards {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .activity-card p {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Activities h1 {
+        font-size: 1.5rem;
+        margin-bottom: 60px;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(3, 1fr); /* Adjust to one column */
+        gap: 20px;
+    }
+
+    .activitys-cards {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
+
+    .activity-card p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .Activities {
+        padding-top: 80px;
+    }
+
+    .Activities h1 {
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+    }
+
+    .activities-grid {
+        gap: 20px;
+    }
+
+    .activitys-cards {
+        padding: 5px;
+    }
+
+    .activity-card p {
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .lOgo{
+        margin-left: 3%;
+    }
+    .Activities h1 {
+        margin-left: 3%;
+        font-size: 1.75rem;
+        margin-bottom: 80px;
+    }
+
+    .activities-grid {
+        margin-left: -10%;
+        grid-template-columns: repeat(3, 1fr); /* Adjust to two columns */
+        gap: 20px;
+    }
+
+    .activitys-cards {
+        margin-left: 200px;
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (min-width: 1025px) and (max-width: 2568px) {
+    /*.lOgo{*/
+    /*    !*margin-left: 20%;*!*/
+    /*}*/
+    .Activities h1 {
+        /*margin-left: 20%;*/
+        font-size: 1.75rem;
+        margin-bottom: 80px;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(3, 1fr); /* Adjust to two columns */
+        /*gap: 20px;*/
+    }
+
+    .activitys-cards {
+        margin-left: 200px;
+        width: 200px;
+        height: 200px;
+    }
+}

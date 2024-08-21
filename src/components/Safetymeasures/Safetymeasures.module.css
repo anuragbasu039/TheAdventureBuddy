@@ -1,0 +1,152 @@
+/* General styles */
+.section {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    align-items: center;
+    position: relative; /* Needed for the ::before pseudo-element */
+}
+
+.s {
+    width: 30%;
+    margin-left: 150px;
+    font-size: 35px;
+    font-weight: bold;
+    padding-right: 20px;
+    color: #6E9B40;
+    font-family: 'Monda';
+}
+
+.section ul {
+    width: 70%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 150px;
+}
+
+.section ul li {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-family: 'Monda';
+}
+
+/* Add a border in the middle */
+.section:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 80%; /* Adjusted for better visibility */
+    background: black;
+    left: 30%;
+    top: 10%;
+}
+
+/* Responsive design for large tablets and smaller screens */
+@media (max-width: 1024px) {
+    .safety-measures{
+        margin-top: 20%;
+    }
+    .s {
+        margin-left: 100px;
+        font-size: 30px;
+    }
+
+    .section ul {
+        margin-right: 100px;
+    }
+
+    .section:before {
+        left: 32%;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .safety-measures{
+        margin-top: 2%;
+    }
+    .section{
+        width: 100%;
+        margin-left: -8%;
+    }
+    .section ul li {
+        width: 130%;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        font-family: 'Monda';
+    }
+}
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .safety-measures{
+        margin-top: 3%;
+    }
+    .s {
+        margin-left: 100px;
+        font-size: 30px;
+    }
+    .section{
+        margin-left: 8%;
+    }
+    .section ul{
+        margin-right: 100px;
+    }
+
+    .section:before {
+        left: 32%;
+    }
+}
+/* Responsive design for medium tablets and smaller screens */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        align-items: flex-start;
+        /*padding: 20px;*/
+    }
+
+    .s {
+        width: 100%;
+        margin-left: 0;
+        font-size: 28px;
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .section ul {
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .section:before {
+        display: none; /* Hide the border on smaller screens */
+    }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+
+    .s {
+        font-size: 24px;
+    }
+
+    .section ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Additional responsive design for very small screens */
+@media (max-width: 320px) {
+
+    .safety-measures{
+        width: 30%;
+    }
+    .s {
+      margin-left: 70%;
+        font-size: 30px;
+    }
+
+    .section ul li {
+        margin-left: 60%;
+        width: 150%;
+        font-size: 1rem;
+    }
+}

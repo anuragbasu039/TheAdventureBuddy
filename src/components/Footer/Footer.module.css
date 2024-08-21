@@ -1,0 +1,139 @@
+/* General styles */
+.footer {
+    background-color: #EBEBEB;
+    color: black;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .footer-logo {
+    width: 250px;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Monda';
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+    font-family: 'Monda';
+  }
+  
+  .footer-section ul li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #007BFF; /* Change color on hover */
+  }
+  
+  .social-icons a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #007BFF; /* Change color on hover */
+  }
+  
+  .footer-section address {
+    font-style: normal;
+    margin-bottom: 10px;
+    font-family: 'Monda';
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-section p a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section p a:hover {
+    color: #007BFF; /* Change color on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      width: 120px;
+    }
+  
+    .footer-section h4 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+  
+    .footer-bottom {
+      margin-top: 10px;
+    }
+  }
+  
+  /* Additional responsive design for very small screens */
+  @media (max-width: 480px) {
+    .footer-section {
+      margin: 5px 0;
+      width: 100%;
+    }
+  
+    .footer-logo {
+      width: 100px;
+    }
+  
+    .footer-section h4 {
+      font-size: 1rem;
+    }
+  
+    .footer-section ul li {
+      margin-bottom: 5px;
+    }
+  
+    .social-icons a {
+      margin: 0 5px;
+    }
+  
+    .footer-bottom {
+      margin-top: 5px;
+      font-size: 0.8rem;
+    }
+  }
+  
