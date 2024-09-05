@@ -1,6 +1,8 @@
-// eslint-disable-next-line no-unused-vars
+// src/components/RegistrationForm/RegistrationForm.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../../firebaseConfig'; // Import Firestore database
 import './Registration.css';
 import Footer from '../../components/Footer/Footer';
 
@@ -65,7 +67,7 @@ const RegistrationForm = () => {
         if (!formData.class) newErrors.class = 'Class is required';
         if (!formData.section) newErrors.section = 'Section is required';
         if (!formData.whatsappNo) newErrors.whatsappNo = 'Whatsapp No is required';
-        else if(!/^\d{10}$/.test(formData.whatsappNo)) newErrors.whatsappNo = 'Whatsapp No must be 10 digits';
+        else if (!/^\d{10}$/.test(formData.whatsappNo)) newErrors.whatsappNo = 'Whatsapp No must be 10 digits';
         if (!formData.mobileNo) newErrors.mobileNo = 'Mobile No is required';
         else if (!/^\d{10}$/.test(formData.mobileNo)) newErrors.mobileNo = 'Mobile No must be 10 digits';
         if (!formData.address) newErrors.address = 'Address is required';
@@ -78,10 +80,22 @@ const RegistrationForm = () => {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            navigate('/checkform', { state: { formData, profileImage } });
+            try {
+                // Save the form data to Firestore
+                const docRef = collection(db, 'registrations');
+                await addDoc(docRef, {
+                    ...formData,
+                    profileImage: profileImage // Save profile image URL
+                });
+                
+                // Redirect after successful submission
+                navigate('/checkform', { state: { formData, profileImage } });
+            } catch (error) {
+                console.error("Error adding document: ", error);
+            }
         }
     };
 
@@ -152,48 +166,36 @@ const RegistrationForm = () => {
                             <label>Date Of Birth:</label>
                             <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} />
                             {errors.dateOfBirth && <span className="error">{errors.dateOfBirth}</span>}
-                        </div>
-                        <div className="form-group-age">
                             <label>Age:</label>
-                            <input type="number" name="age" value={formData.age} onChange={handleChange} />
+                            <input type="text" name="age" value={formData.age} onChange={handleChange} />
                             {errors.age && <span className="error">{errors.age}</span>}
                         </div>
-                        <div className="form-group-class">
+                        <div className="form-group-class-section">
                             <label>Class:</label>
                             <input type="text" name="class" value={formData.class} onChange={handleChange} />
                             {errors.class && <span className="error">{errors.class}</span>}
-                        </div>
-                        <div className="form-group-section">
                             <label>Section:</label>
                             <input type="text" name="section" value={formData.section} onChange={handleChange} />
                             {errors.section && <span className="error">{errors.section}</span>}
                         </div>
-                        <div className="form-group-whatapp">
+                        <div className="form-group-contacts">
                             <label>Whatsapp No:</label>
                             <input type="text" name="whatsappNo" value={formData.whatsappNo} onChange={handleChange} />
                             {errors.whatsappNo && <span className="error">{errors.whatsappNo}</span>}
-                        </div>
-                        <div className="form-group-mobile">
                             <label>Mobile No:</label>
                             <input type="text" name="mobileNo" value={formData.mobileNo} onChange={handleChange} />
                             {errors.mobileNo && <span className="error">{errors.mobileNo}</span>}
                         </div>
                         <div className="form-group-address">
                             <label>Address:</label>
-                            <textarea name="address" value={formData.address} onChange={handleChange}></textarea>
+                            <textarea name="address" value={formData.address} onChange={handleChange} />
                             {errors.address && <span className="error">{errors.address}</span>}
-                        </div>
-                        <div className="form-group-city">
                             <label>City:</label>
                             <input type="text" name="city" value={formData.city} onChange={handleChange} />
                             {errors.city && <span className="error">{errors.city}</span>}
-                        </div>
-                        <div className="form-group-state">
                             <label>State:</label>
                             <input type="text" name="state" value={formData.state} onChange={handleChange} />
                             {errors.state && <span className="error">{errors.state}</span>}
-                        </div>
-                        <div className="form-group-pincode">
                             <label>Pincode:</label>
                             <input type="text" name="pincode" value={formData.pincode} onChange={handleChange} />
                             {errors.pincode && <span className="error">{errors.pincode}</span>}
@@ -203,19 +205,17 @@ const RegistrationForm = () => {
                             <input type="text" name="aadharNo" value={formData.aadharNo} onChange={handleChange} />
                             {errors.aadharNo && <span className="error">{errors.aadharNo}</span>}
                         </div>
-                    </div>
-                    <div className="disease">
-                        <h3>Does the student have any allergies, chronic illness, or medical condition? If yes, please describe.</h3>
-                        <input type="text" name="disease" value={formData.disease} onChange={handleChange} />
+                        <div className="form-group-disease">
+                            <label>Any Disease:</label>
+                            <input type="text" name="disease" value={formData.disease} onChange={handleChange} />
+                        </div>
+                        <div className="form-group-agree">
+                            <input type="checkbox" name="agree" checked={formData.agree} onChange={handleChange} />
+                            <label>I agree to the terms and conditions</label>
+                            {errors.agree && <span className="error">{errors.agree}</span>}
+                        </div>
                     </div>
 
-                    <div className="form-group agree-group">
-                        <input type="checkbox" name="agree" checked={formData.agree} onChange={handleChange} />
-                        <label>
-                            I Agree To Adhere To The Discipline Of The Movement And The Program In Particular, And Abide By The Rules And Regulations Of The Institution During This Entire Event. In The Case Of Any Accident, Illness, Or Injury, Whether Minor Or A Natural, I Will Not Hold The Authorities Directly Responsible At All. I Further Declare That I Have Not Been In Contact With Any Infectious Disease For The Past Month And That I Am In Good Health And Physically Fit To Participate In The Adventure Program.
-                        </label>
-                        {errors.agree && <span className="error">{errors.agree}</span>}
-                    </div>
                     <div className="btns">
                         <button type="submit">Submit</button>
                     </div>

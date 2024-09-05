@@ -1,14 +1,15 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../components/ContextAuth/AuthContext';
 
 const Navbar = () => {
     const [shrink, setShrink] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const { user, logout } = useContext(AuthContext); // Access user and logout from AuthContext
 
     const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -29,6 +30,10 @@ const Navbar = () => {
     const toggleDropdown = (e) => {
         e.stopPropagation();
         setDropdownOpen(!dropdownOpen);
+    };
+
+    const handleLogout = () => {
+        logout(); // Call logout function from AuthContext
     };
 
     useEffect(() => {
@@ -71,11 +76,18 @@ const Navbar = () => {
                     <li className="nav-item"><NavLink to="/safety">Safety</NavLink></li>
                     <li className="nav-item"><NavLink to="/gallery">Gallery</NavLink></li>
                     <li className="nav-item"><NavLink to="/contact">Contact</NavLink></li>
-                    <li className="nav-item">
-                        <NavLink to="/login">
-                            <button className="login-button">Log In</button>
-                        </NavLink>
-                    </li>
+
+                    {user ? (
+                        <li className="nav-item">
+                            <button className="logout-button" onClick={handleLogout}>Log Out</button>
+                        </li>
+                    ) : (
+                        <li className="nav-item">
+                            <NavLink to="/login">
+                                <button className="login-button">Log In</button>
+                            </NavLink>
+                        </li>
+                    )}
                 </ul>
             </div>
         </nav>

@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import styles from'./Logobar.module.css';
+import styles from './Logobar.module.css';
 import logo1 from '../../assets/Cassin.png';
 import logo2 from '../../assets/CAMP-SAFETY.png';
 import logo3 from '../../assets/CAMP-logo.png';
@@ -17,13 +17,16 @@ const LogoBar = () => {
     ];
 
     return (
-        <div className={styles["logo-bar"]}>
-            {brands.map((brand, index) => (
-                <div key={index} className={styles["brand-slide"]}>
-                    <img src={brand.logo} alt={`Brand ${index}`} className={styles["brand-logo"]} />
-                </div>
-            ))}
-        </div>
+    
+            
+            <div className={styles["logo-bar"]}>
+                {brands.map((brand, index) => (
+                    <div key={index} className={styles["brand-slide"]}>
+                        <img src={brand.logo} alt={`Brand ${index}`} className={styles["brand-logo"]} />
+                    </div>
+                ))}
+            </div>
+        
     );
 };
 

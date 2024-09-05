@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import Contactimg from '../../assets/Contact image.png';
 import Footer from '../../components/Footer/Footer';
+import { db } from '../../firebaseConfig'; // Import the Firebase Firestore instance
+import { collection, addDoc } from 'firebase/firestore'; // Import Firestore functions
 
 const ContactPage = () => {
     const [name, setName] = useState('');
@@ -9,8 +11,7 @@ const ContactPage = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const formData = {
@@ -18,14 +19,22 @@ const ContactPage = () => {
             mobile,
             email,
             message,
+            timestamp: new Date(), // Add a timestamp
         };
 
-        console.log(formData);
+        try {
+            // Add a new document with a generated ID
+            const docRef = await addDoc(collection(db, 'contacts'), formData);
+            console.log('Document written with ID: ', docRef.id);
 
-        setName('');
-        setMobile('');
-        setEmail('');
-        setMessage('');
+            // Clear the form
+            setName('');
+            setMobile('');
+            setEmail('');
+            setMessage('');
+        } catch (e) {
+            console.error('Error adding document: ', e);
+        }
     };
 
     return (
@@ -63,11 +72,6 @@ const ContactPage = () => {
                 </div>
                 <div className={styles["contact-image"]}>
                     <img src={Contactimg} alt="Contact" />
-                    {/*<div className="contact-info">*/}
-                    {/*    <p>RISE Incubation Center, Nagri Nigam Premises, Elite Chauraha, Jhansi, Uttar Pradesh - 284001</p>*/}
-                    {/*    <p>+919518619813, 8827531565</p>*/}
-                    {/*    <p>connect@theadventurebuddy.in</p>*/}
-                    {/*</div>*/}
                 </div>
             </div>
             <Footer />

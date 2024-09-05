@@ -5,6 +5,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar.jsx';
 import { AuthProvider } from './components/ContextAuth/AuthContext';
+import RegistrationForm from './Pages/Registration/Registration.jsx';
 const About = lazy(() => import('./Pages/About/About.jsx'));
 const Home = lazy(() => import('./Pages/Home/Home.jsx'));
 const Contact = lazy(() => import('./Pages/Contact/Contact.jsx'));
@@ -35,15 +36,15 @@ function App() {
                         <Route path="/activities/outdoorcamp" element={<Masterpioneer/>}/>
                         <Route path="/activities/adventureactivities" element={<Advanceactivities/>}/>
                         <Route path="/safety" element={<SafetySection/>}/>
-                        <Route path="/register" element={<Register/>}/>
-                        <Route path="/form" element={<Registration/>}/>
+                        <Route path="/register" element={<RegistrationForm/>}/>
+                        {/* <Route path="/form" element={<Registration/>}/> */}
                         <Route path="/checkform" element={<CheckFrom/>}/>
                         <Route path="/nanital" element={<Nanitalpage/>}/>
                         <Route path="/manali" element={<Manalipage/>}/>
                         <Route path="/shimla" element={<Shimlapage/>}/>
                         <Route path="/activities/rising" element={<Risewenderer/>}/>
-                        <Route path="/signups" element={<Signup />} />
-                        <Route path="/signup" element={<LoginPages />} />
+                        <Route path="/signup" element={<Signup />} />
+                        {/* <Route path="/signups" element={<LoginPages />} /> */}
                         <Route path="/login" element={<Login/>}/>
                     </Routes>
                 </Suspense>
