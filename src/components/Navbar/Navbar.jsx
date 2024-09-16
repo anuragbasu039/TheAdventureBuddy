@@ -67,14 +67,14 @@ const Navbar = () => {
                     <li className="nav-item dropdown" onClick={toggleDropdown}>
                         <NavLink to="">Activities</NavLink>
                         <ul className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
-                            <li><NavLink to="/activities/schoolcamp" onClick={(e) => e.stopPropagation()}>Epic Explorer</NavLink></li>
+                            {/* <li><NavLink to="/activities/schoolcamp" onClick={(e) => e.stopPropagation()}>Epic Explorer</NavLink></li> */}
                             <li><NavLink to="/activities/rising" onClick={(e) => e.stopPropagation()}>Rising Wanderer</NavLink></li>
                             <li><NavLink to="/activities/outdoorcamp" onClick={(e) => e.stopPropagation()}>Master Pioneer</NavLink></li>
                         </ul>
                     </li>
                     <li className="nav-item"><NavLink to="/register">Register</NavLink></li>
                     <li className="nav-item"><NavLink to="/safety">Safety</NavLink></li>
-                    <li className="nav-item"><NavLink to="/gallery">Gallery</NavLink></li>
+                    <li className="nav-item"><NavLink to="/about">About</NavLink></li>
                     <li className="nav-item"><NavLink to="/contact">Contact</NavLink></li>
 
                     {user ? (

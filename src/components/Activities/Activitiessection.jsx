@@ -18,7 +18,7 @@ const ActivitiesSection = () => {
                 </div>
             </div>
             <div className={styles.activities}>
-                <a href="/activities/schoolcamp" className={styles["activity-card"]}>
+                <a href="/" className={styles["activity-card"]}>
                     <img id='school' src={schoolcamp} alt="School Camp" />
                      {/*<p>School Camp</p> */}
                 </a>

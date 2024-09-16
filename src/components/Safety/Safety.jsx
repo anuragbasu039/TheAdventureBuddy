@@ -4,6 +4,7 @@ import styles from './Safety.module.css';
 import logo1 from '../../assets/professionaltrainer.png';
 import logo2 from '../../assets/accilives new logo.png';
 import logo3 from '../../assets/Certified Equipment.png';
+import { NavLink } from 'react-router-dom';
 
 function Safety() {
     return (
@@ -15,9 +16,9 @@ function Safety() {
             </header>
             <div className={styles.content}>
                 <div className={`${styles.box1} ${styles.image1}`}>
-                    <a href="/safety" rel="noopener noreferrer">
+                    <NavLink to="/safety" rel="noopener noreferrer">
                         <img src={logo1} alt="Professional Trainer" className={styles.image} />
-                    </a>
+                    </NavLink>
                 </div>
                 <div className={`${styles.box1} ${styles.image1}`}>
                     {/*<div className="letter-i">I</div>*/}
@@ -26,14 +27,14 @@ function Safety() {
                     {/*    <div className="insurance">Insurance</div>*/}
                     {/*</div>*/}
                     <p>Powered by</p>
-                    <a href="/safety" rel="noopener noreferrer">
+                    <NavLink to="/safety" rel="noopener noreferrer">
                         <img src={logo2} alt="Assured Insurance" className={styles.image} id="img"/>
-                    </a>
+                    </NavLink>
                 </div>
                 <div className={styles.box}>
-                    <a href="/safety" rel="noopener noreferrer">
+                    <NavLink to="/safety" rel="noopener noreferrer">
                         <img src={logo3} alt="Certified Equipment" className={styles.image} />
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         </div>

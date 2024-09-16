@@ -24,10 +24,10 @@ function Home() {
             <ActivitiesSection />
             <Safety />
             <AdventureStart />
-            {/* <AdventureSection /> */}
+            <AdventureSection />
             {/*<NewsSection />*/}
             <Testimonial />
-            {/* <BrandSlider /> */}
+            <BrandSlider />
             <Footer />
         </div>
     )

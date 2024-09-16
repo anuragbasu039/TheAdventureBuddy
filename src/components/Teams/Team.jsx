@@ -30,23 +30,23 @@ function App() {
             name: 'Farhan Hashmi',
             title: 'Founder & CEO',
             image: Founder,
-            linkedin: 'https://www.linkedin.com/in/farhan',
+            // linkedin: 'https://linkedin.com/in/farhan-hashmi-29460023b/',
             className: '',
         },
         {
             name: 'Arbaz Khan',
             title: 'CEO',
             image: CEO,
-            linkedin: 'https://www.linkedin.com/in/arbaz',
+            // linkedin: 'https://www.linkedin.com/in/arbaz-khan-b063171ab/',
             className: 'middle-card',
         },
         {
             name: 'Atik Uddin',
             title: 'CFO',
             image: CFO,
-            linkedin: 'https://www.linkedin.com/in/atik',
+            // linkedin: 'https://www.linkedin.com/in/atik',
             className: '',
-        },
+        }
     ];
 
     return (
