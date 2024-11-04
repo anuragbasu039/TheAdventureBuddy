@@ -26,10 +26,11 @@
 
 .image-slider {
     width: 30%;
-    height: 80%;
+    height: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
-    margin-right: 200px;
+    /* margin-right: 200px; */
 }
+
 
 .slick-slide img {
     display: block;
@@ -38,9 +39,7 @@
     max-height: 100%;
 }
 
-.slick-dots {
-    bottom: -30px;
-}
+
 
 /* Media queries for various devices */
 
@@ -151,7 +150,11 @@
         width: 30%; /* Default width */
         height: 80%; /* Default height */
         margin-right: 200px; /* Default right margin */
+        border-radius: 2%;
     }
+    /* img{
+        height: 350px;
+    } */
 }
 
 /* Width 1440px to 2559px */

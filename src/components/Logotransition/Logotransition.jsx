@@ -8,7 +8,7 @@ const App = () => {
     const [hideLogo, setHideLogo] = useState(false);
 
     const handleScroll = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 50) {
             setShrinkLogo(true);
             setHideLogo(true);
         } else {
@@ -33,7 +33,7 @@ const App = () => {
                 </div>
             </header>
         </div>
-        <Header />
+        {/* <Header /> */}
         </>
     );
 };

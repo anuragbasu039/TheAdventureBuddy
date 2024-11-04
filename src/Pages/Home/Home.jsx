@@ -18,7 +18,7 @@ function Home() {
         <div>
             {/*<Navbar/>*/}
             <Logotransition />
-            {/* <Header /> */}
+            <Header />
             <HeroSection />
             <Count />
             <ActivitiesSection />

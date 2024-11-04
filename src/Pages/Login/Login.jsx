@@ -9,12 +9,13 @@ import character3 from '../../assets/character3.svg';
 import character4 from '../../assets/character4.svg';
 import logo from '../../assets/buddylogo1.svg';
 import Footer from "../../components/Footer/Footer.jsx";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../components/ContextAuth/AuthContext';
 
 const LoginPage = () => {
     const [loginData, setLoginData] = useState({ username: '', password: '' });
     const { login } = useContext(AuthContext);
+    const navigate = useNavigate(); // Initialize useNavigate hook
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,9 +26,13 @@ const LoginPage = () => {
         e.preventDefault();
         console.log('Login Data:', loginData); // Log the login data to the console
 
-        // You would typically send loginData to your backend here and get a user object in response
+        // Mocking backend response for demo purposes
         const userData = { username: loginData.username }; // Mock user data
-        login(userData);
+
+        login(userData); // Update AuthContext with user data
+
+        // Redirect to the home page
+        navigate('/');
     };
 
     const settings = {
@@ -51,20 +56,20 @@ const LoginPage = () => {
                 </div>
                 <div className="content">
                     <div className="carousel-wrapper">
-                        <Slider {...settings}>
+                        {/* <Slider {...settings}> */}
                             <div>
-                                <img src={character1} alt="Character 1" className="characters" id='character1'/>
+                                <img src={character1} alt="Character 1" className="characters" id='character1' />
+                            </div>
+                            {/* <div>
+                                <img src={character2} alt="Character 2" className="characters" id="character2" />
                             </div>
                             <div>
-                                <img src={character2} alt="Character 2" className="characters" id="character2"/>
+                                <img src={character3} alt="Character 3" className="characters" id="character3" />
                             </div>
                             <div>
-                                <img src={character3} alt="Character 3" className="characters" id="character3"/>
-                            </div>
-                            <div>
-                                <img src={character4} alt="Character 4" className="characters" id='character4'/>
-                            </div>
-                        </Slider>
+                                <img src={character4} alt="Character 4" className="characters" id='character4' />
+                            </div> */}
+                        {/* </Slider> */}
                     </div>
                     <div className="form-wrapper">
                         <h1 className="title">Login to Your Account</h1>

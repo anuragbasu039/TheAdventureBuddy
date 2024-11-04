@@ -4,9 +4,8 @@ import Slider from 'react-slick';
 import styles from './Testimonial.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo4 from '../../assets/Farhan.JPG'
-import logo5 from '../../assets/Atik.JPG'
-import logo6 from '../../assets/arbaz.jpg'
+import pic1 from '../../assets/Tyre Wall.png'
+import pic2 from '../../assets/Wall Climbing.png'
 function App() {
   const settings = {
     dots: false,
@@ -28,10 +27,10 @@ function App() {
       <div className={styles["image-slider"]}>
         <Slider {...settings}>
           <div>
-             {/*<img src={logo4} alt="Slide 1" />*/}
+             {/* <img src={pic1} alt="Slide 1" /> */}
           </div>
           <div>
-             {/*<img src={logo5} alt="Slide 2" />*/}
+             {/* <img src={pic2} alt="Slide 2" /> */}
           </div>
           <div>
              {/*<img src={logo6} alt="Slide 3" />*/}

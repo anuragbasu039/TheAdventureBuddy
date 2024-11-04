@@ -62,11 +62,11 @@ const ContactPage = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <textarea
+                        <input
                             placeholder="Message"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                        ></textarea>
+                        ></input>
                         <button type="submit">Submit</button>
                     </form>
                 </div>

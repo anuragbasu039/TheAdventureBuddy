@@ -5,24 +5,25 @@ html {
     box-sizing: border-box;
     /* Make the page tall enough to scroll */
 }
+
 /* Navbar styles */
 .navbar {
     display: flex;
     justify-content: center;
     padding: 10px 20px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1.6);
     border-radius: 50px;
     position: fixed;
-    top: -100px;
-    /* Start position above the viewport */
+    top: 100px;
+
     left: 50%;
     transform: translateX(-50%) translateY(40%);
-    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
     opacity: 0;
     z-index: 1000;
-    /* Ensure navbar is above other content */
-    width: 80%;
+
+    width: 100px;
 }
 
 .navbar.visible {
@@ -90,6 +91,10 @@ html {
     font-size: 16px;
 }
 
+.login-button:hover {
+    background-color: green;
+}
+
 .login-button {
     background-color: #2e9cca;
     color: white;
@@ -100,7 +105,7 @@ html {
     cursor: pointer;
     margin-top: -10px;
     margin-left: 20px;
-    /* Add margin for spacing */
+
 }
 
 .nav-item .dropdown-menu {
@@ -157,139 +162,9 @@ html {
     .navbar.visible {
         width: 90%;
     }
-}body,
- html {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     /* Make the page tall enough to scroll */
- }
-
-/* Navbar styles */
-.navbar {
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-    position: fixed;
-    top: -100px;
-    /* Start position above the viewport */
-    left: 50%;
-    transform: translateX(-50%) translateY(40%);
-    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
-    z-index: 1000;
-    /* Ensure navbar is above other content */
-    width: 80%;
 }
 
-.navbar.visible {
-    top: 0;
-    /* Final position */
-    opacity: 1;
-    width: 65%;
-}
 
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-}
-
-.menu-toggles {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    /* Center the list items */
-    flex-wrap: wrap;
-    /* Ensure items wrap in mobile view */
-    position: relative;
-}
-
-.nav-list.open {
-    display: block;
-    /* Show the list on mobile when the menu is open */
-}
-
-.nav-item {
-    margin: 0 15px;
-    padding-top: 10px;
-    position: relative;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: #6E9B40;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    white-space: nowrap;
-    /* Prevent text from wrapping */
-}
-
-.nav-item a:hover {
-    color: #007bff;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: green;
-    font-size: 16px;
-}
-
-.login-button {
-    background-color: #2e9cca;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: -10px;
-    margin-left: 20px;
-    /* Add margin for spacing */
-}
-
-.nav-item .dropdown-menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    white-space: nowrap;
-    /* Prevent text from wrapping */
-}
-
-.nav-item.dropdown:hover .dropdown-menu,
-.nav-item.dropdown .dropdown-menu.open {
-    display: block;
-}
-
-.dropdown-menu li {
-    padding: 10px 5px;
-    list-style: none;
-    margin-right: 50px;
-}
-
-.dropdown-menu li a {
-    color: #6E9B40;
-}
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -303,8 +178,10 @@ html {
     .navbar {
         flex-direction: column;
         padding: 10px;
-        width: 50%; /* Adjust width for mobile view */
-        transform: translateX(-50%) translateY(10%); /* Adjust position for mobile view */
+        width: 50%;
+        /* Adjust width for mobile view */
+        transform: translateX(-50%) translateY(10%);
+        /* Adjust position for mobile view */
     }
 
     .navbar-container {
@@ -317,7 +194,8 @@ html {
     }
 
     .nav-list {
-        display: none; /* Hide the list initially */
+        display: none;
+        /* Hide the list initially */
         flex-direction: column;
         align-items: center;
         gap: 10px;
@@ -325,48 +203,59 @@ html {
     }
 
     .nav-list.open {
-        display: flex; /* Show the list when the menu is open */
+        display: flex;
+        /* Show the list when the menu is open */
     }
 
     .nav-item {
-        margin: 10px 0; /* Adjust margin for mobile view */
+        margin: 10px 0;
+        /* Adjust margin for mobile view */
     }
 
     .login-button {
         width: 100%;
         text-align: center;
-        margin: 10px 0; /* Adjust margin for mobile view */
+        margin: 10px 0;
+        /* Adjust margin for mobile view */
     }
 }
 
 @media (max-width: 480px) {
     .navbar {
-        width: 90%; /* Further adjust width for smaller screens */
+        width: 90%;
+        /* Further adjust width for smaller screens */
         padding: 5px;
     }
 
     .nav-item a {
-        font-size: 16px; /* Adjust font size for smaller screens */
+        font-size: 16px;
+        /* Adjust font size for smaller screens */
     }
 
     .login-button {
-        font-size: 14px; /* Adjust button font size for smaller screens */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
+        font-size: 14px;
+        /* Adjust button font size for smaller screens */
+        padding: 8px 16px;
+        /* Adjust padding for smaller screens */
     }
 }
 
 @media (max-width: 320px) {
     .navbar {
-        width: 100%; /* Further adjust width for very small screens */
+        width: 100%;
+        /* Further adjust width for very small screens */
         padding: 5px;
     }
 
     .nav-item a {
-        font-size: 14px; /* Adjust font size for very small screens */
+        font-size: 14px;
+        /* Adjust font size for very small screens */
     }
 
     .login-button {
-        font-size: 12px; /* Adjust button font size for very small screens */
-        padding: 6px 12px; /* Adjust padding for very small screens */
+        font-size: 12px;
+        /* Adjust button font size for very small screens */
+        padding: 6px 12px;
+        /* Adjust padding for very small screens */
     }
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/ContextAuth/AuthContext';
 
 const Navbar = () => {
@@ -10,6 +10,7 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const { user, logout } = useContext(AuthContext); // Access user and logout from AuthContext
+    const navigate = useNavigate(); // Hook to navigate to other routes
 
     const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -67,7 +68,6 @@ const Navbar = () => {
                     <li className="nav-item dropdown" onClick={toggleDropdown}>
                         <NavLink to="">Activities</NavLink>
                         <ul className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
-                            {/* <li><NavLink to="/activities/schoolcamp" onClick={(e) => e.stopPropagation()}>Epic Explorer</NavLink></li> */}
                             <li><NavLink to="/activities/rising" onClick={(e) => e.stopPropagation()}>Rising Wanderer</NavLink></li>
                             <li><NavLink to="/activities/outdoorcamp" onClick={(e) => e.stopPropagation()}>Master Pioneer</NavLink></li>
                         </ul>
@@ -78,9 +78,14 @@ const Navbar = () => {
                     <li className="nav-item"><NavLink to="/contact">Contact</NavLink></li>
 
                     {user ? (
-                        <li className="nav-item">
-                            <button className="logout-button" onClick={handleLogout}>Log Out</button>
-                        </li>
+                        <>
+                            <li className="nav-item">
+                                <NavLink to="/profile" className="profile-link">Profile</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <button className="logout-button" onClick={handleLogout}>Log Out</button>
+                            </li>
+                        </>
                     ) : (
                         <li className="nav-item">
                             <NavLink to="/login">
