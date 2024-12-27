@@ -30,22 +30,22 @@ function App() {
                 <Navbar />
                 <Suspense fallback={<p>Loading...</p>}>
                     <Routes>
-                        <Route path="/" element={<Home/>}/>
-                        <Route path="/about" element={<About/>}/>
-                        <Route path="/contact" element={<Contact/>}/>
-                        <Route path="/activities/outdoorcamp" element={<Masterpioneer/>}/>
-                        <Route path="/activities/adventureactivities" element={<Advanceactivities/>}/>
-                        <Route path="/safety" element={<SafetySection/>}/>
-                        <Route path="/register" element={<RegistrationForm/>}/>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/activities/outdoorcamp" element={<Masterpioneer />} />
+                        <Route path="/activities/adventureactivities" element={<Advanceactivities />} />
+                        <Route path="/safety" element={<SafetySection />} />
+                        <Route path="/register" element={<RegistrationForm />} />
                         {/* <Route path="/form" element={<Registration/>}/> */}
-                        <Route path="/checkform" element={<CheckFrom/>}/>
-                        <Route path="/nanital" element={<Nanitalpage/>}/>
-                        <Route path="/manali" element={<Manalipage/>}/>
-                        <Route path="/shimla" element={<Shimlapage/>}/>
-                        <Route path="/activities/rising" element={<Risewenderer/>}/>
+                        <Route path="/checkform" element={<CheckFrom />} />
+                        <Route path="/nanital" element={<Nanitalpage />} />
+                        <Route path="/manali" element={<Manalipage />} />
+                        <Route path="/shimla" element={<Shimlapage />} />
+                        <Route path="/activities/rising" element={<Risewenderer />} />
                         <Route path="/signup" element={<Signup />} />
                         {/* <Route path="/signups" element={<LoginPages />} /> */}
-                        <Route path="/login" element={<Login/>}/>
+                        {/* <Route path="/login" element={<Login/>}/> */}
                     </Routes>
                 </Suspense>
             </Router>

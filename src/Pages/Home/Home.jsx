@@ -17,7 +17,7 @@ function Home() {
     return (
         <div>
             {/*<Navbar/>*/}
-            <Logotransition />
+            {/* <Logotransition /> */}
             <Header />
             <HeroSection />
             <Count />

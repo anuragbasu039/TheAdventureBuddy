@@ -88,7 +88,7 @@ const Navbar = () => {
                         </>
                     ) : (
                         <li className="nav-item">
-                            <NavLink to="/login">
+                            <NavLink to="/">
                                 <button className="login-button">Log In</button>
                             </NavLink>
                         </li>
