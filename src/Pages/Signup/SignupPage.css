@@ -11,7 +11,7 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #f8f8f8;
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/adventurebuddy-tab-web.appspot.com/o/bglogin.png?alt=media&token=01557208-1e9f-43cf-b9ac-692d5f442f87'); /* Ensure the path to your background image is correct */
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/adventurebuddy-tab-web.appspot.com/o/bglogin.png?alt=media&token=01557208-1e9f-43cf-b9ac-692d5f442f87');
     background-size: cover;
     background-position: center;
 }
@@ -36,6 +36,8 @@ body {
 .logo {
     margin-top: -20px;
     height: 70px; /* Reduced height */
+    display: block; /* Ensure logo is visible */
+    max-width: 100%; /* Ensure responsiveness */
 }
 
 .content {
@@ -48,15 +50,13 @@ body {
 }
 
 .character {
-    width: 350px; /* Adjusted the size for better responsiveness */
+    width: 350px;
     margin-right: 0.5rem; /* Reduced margin */
 }
 
 .form-wrapper {
-    /*background: white;*/
     padding: 2rem; /* Reduced padding */
     border-radius: 10px;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
     width: 80%; /* Reduced width */
     max-width: 300px; /* Reduced max-width */
     text-align: center;
@@ -112,6 +112,7 @@ body {
     color: white;
     font-size: 0.75rem; /* Reduced font size */
     cursor: pointer;
+    margin-top: 1rem; /* Added margin for spacing */
 }
 
 .button:hover {
@@ -149,5 +150,11 @@ body {
 
     .button {
         font-size: 0.625rem; /* Reduced font size */
+        margin-top: 1rem; /* Ensure button has top margin */
+    }
+
+    .logo {
+        height: 50px; /* Adjusted logo size for small devices */
+        margin-top: -10px; /* Adjusted logo margin */
     }
 }

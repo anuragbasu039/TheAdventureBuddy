@@ -1,101 +1,50 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../components/ContextAuth/AuthContext';
+import logo from '../../assets/logo.png'; // Adjust the path to your logo image
 
 const Navbar = () => {
-    const [shrink, setShrink] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-    const { user, logout } = useContext(AuthContext); // Access user and logout from AuthContext
-    const navigate = useNavigate(); // Hook to navigate to other routes
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            setShrink(true);
-        } else {
-            setShrink(false);
-        }
+    const handleMobileMenuToggle = () => {
+        setMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
     };
-
-    const closeMenu = () => {
-        setMenuOpen(false);
-    };
-
-    const toggleDropdown = (e) => {
-        e.stopPropagation();
-        setDropdownOpen(!dropdownOpen);
-    };
-
-    const handleLogout = () => {
-        logout(); // Call logout function from AuthContext
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
-        const handleOutsideClick = (event) => {
-            if (menuOpen && !event.target.closest('.navbar')) {
-                closeMenu();
-            }
-        };
-
-        document.addEventListener('mousedown', handleOutsideClick);
-        return () => {
-            document.removeEventListener('mousedown', handleOutsideClick);
-        };
-    }, [menuOpen]);
 
     return (
-        <nav className={`navbar ${shrink ? 'visible' : ''}`}>
-            <div className="navbar-container">
-                <button className="menu-toggles" onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
-                </button>
-                <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
-                    <li className="nav-item"><NavLink to="/">Home</NavLink></li>
-                    <li className="nav-item dropdown" onClick={toggleDropdown}>
-                        <NavLink to="">Activities</NavLink>
-                        <ul className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
-                            <li><NavLink to="/activities/rising" onClick={(e) => e.stopPropagation()}>Rising Wanderer</NavLink></li>
-                            <li><NavLink to="/activities/outdoorcamp" onClick={(e) => e.stopPropagation()}>Master Pioneer</NavLink></li>
-                        </ul>
-                    </li>
-                    <li className="nav-item"><NavLink to="/register">Register</NavLink></li>
-                    <li className="nav-item"><NavLink to="/safety">Safety</NavLink></li>
-                    <li className="nav-item"><NavLink to="/about">About</NavLink></li>
-                    <li className="nav-item"><NavLink to="/contact">Contact</NavLink></li>
+        <div className="navbar-container">
 
-                    {user ? (
-                        <>
-                            <li className="nav-item">
-                                <NavLink to="/profile" className="profile-link">Profile</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <button className="logout-button" onClick={handleLogout}>Log Out</button>
-                            </li>
-                        </>
-                    ) : (
-                        <li className="nav-item">
-                            <NavLink to="/">
-                                <button className="login-button">Log In</button>
-                            </NavLink>
-                        </li>
-                    )}
-                </ul>
+            <div className="logo">
+                <a href="/">
+                    <img src={logo} alt="The Adventure Buddy" />
+                </a>
             </div>
-        </nav>
+            <div className={`nav-links ${isMobileMenuOpen ? 'nav-links-mobile' : ''}`}>
+                <a href="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Home</a>
+                <a href="/about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
+                <div className="nav-link dropdown" onClick={toggleDropdown}>
+                    Activities
+                    {isDropdownOpen && (
+                        <div className="dropdown-menu">
+                            <a href="/activities/rising" className="dropdown-item">Rising Wanderer</a>
+                            <a href="/activities/master" className="dropdown-item">Master pioneer</a>
+                            {/*<a href="/rafting" className="dropdown-item">Rafting</a>*/}
+                        </div>
+                    )}
+                </div>
+                <a href="/safety" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Safety</a>
+                <a href="/contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+                <a href="/login" className="nav-link login-button" onClick={() => setMobileMenuOpen(false)}>Login</a>
+            </div>
+            <div className="menu-toggle" onClick={handleMobileMenuToggle}>
+                <span className={`bar ${isMobileMenuOpen ? 'rotate1' : ''}`}></span>
+                <span className={`bar ${isMobileMenuOpen ? 'fade' : ''}`}></span>
+                <span className={`bar ${isMobileMenuOpen ? 'rotate2' : ''}`}></span>
+            </div>
+        </div>
     );
 };
 

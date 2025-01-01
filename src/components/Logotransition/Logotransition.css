@@ -1,102 +1,102 @@
-/* Reset styles and set up basic layout */
-body,
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 200vh;
-    /* Make the page tall enough to scroll */
-    background-color: #FDFDFF;
-}
+/*!* Reset styles and set up basic layout *!*/
+/*body,*/
+/*html {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    height: 200vh;*/
+/*    !* Make the page tall enough to scroll *!*/
+/*    background-color: #FDFDFF;*/
+/*}*/
 
-/* Logo container styles */
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transform-origin: top left;
-    transition: all 0.5s ease-in-out;
-}
+/*!* Logo container styles *!*/
+/*.logo {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%) scale(1);*/
+/*    transform-origin: top left;*/
+/*    transition: all 0.5s ease-in-out;*/
+/*}*/
 
-/* Logo image styles */
-.logo img {
-    width: 900px;
-    /* Initial width */
-    max-width: 100%;
-    transition: all 0.5s ease-in-out;
-}
+/*!* Logo image styles *!*/
+/*.logo img {*/
+/*    width: 900px;*/
+/*    !* Initial width *!*/
+/*    max-width: 100%;*/
+/*    transition: all 0.5s ease-in-out;*/
+/*}*/
 
-/* Shrink class for logo */
-.shrink {
-    top: 10px;
-    left: 20px;
-    transform: translate(0, 0) scale(0.2);
-    /* Adjust scale to fit in header */
-}
+/*!* Shrink class for logo *!*/
+/*.shrink {*/
+/*    top: 10px;*/
+/*    left: 20px;*/
+/*    transform: translate(0, 0) scale(0.2);*/
+/*    !* Adjust scale to fit in header *!*/
+/*}*/
 
-/* Hide class for logo */
-.hide {
-    opacity: 0;
-    /* Hides the logo */
-}
+/*!* Hide class for logo *!*/
+/*.hide {*/
+/*    opacity: 0;*/
+/*    !* Hides the logo *!*/
+/*}*/
 
-/* Content padding to account for fixed header */
-.content {
-    padding-top: 80px;
-    /* Space for the fixed header */
-}
+/*!* Content padding to account for fixed header *!*/
+/*.content {*/
+/*    padding-top: 80px;*/
+/*    !* Space for the fixed header *!*/
+/*}*/
 
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-    .logo {
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -30%) scale(1);
-    }
+/*!* Mobile view adjustments *!*/
+/*@media (max-width: 768px) {*/
+/*    .logo {*/
+/*        top: 30%;*/
+/*        left: 50%;*/
+/*        transform: translate(-50%, -30%) scale(1);*/
+/*    }*/
 
-    .logo img {
-        width: 300px;
-        /* Adjust width for mobile view */
-    }
+/*    .logo img {*/
+/*        width: 300px;*/
+/*        !* Adjust width for mobile view *!*/
+/*    }*/
 
-    .shrink {
-        top: 5px;
-        left: 10px;
-        transform: translate(0, 0) scale(0.15);
-        /* Adjust scale to fit in header */
-    }
+/*    .shrink {*/
+/*        top: 5px;*/
+/*        left: 10px;*/
+/*        transform: translate(0, 0) scale(0.15);*/
+/*        !* Adjust scale to fit in header *!*/
+/*    }*/
 
-    .content {
-        padding-top: 60px;
-        /* Adjust space for the fixed header on mobile */
-    }
-}
+/*    .content {*/
+/*        padding-top: 60px;*/
+/*        !* Adjust space for the fixed header on mobile *!*/
+/*    }*/
+/*}*/
 
-@media (max-width: 480px) {
-    .logo {
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -25%) scale(1);
-    }
+/*@media (max-width: 480px) {*/
+/*    .logo {*/
+/*        top: 25%;*/
+/*        left: 50%;*/
+/*        transform: translate(-50%, -25%) scale(1);*/
+/*    }*/
 
-    .logo img {
-        width: 200px;
-        /* Adjust width for smaller mobile view */
-    }
+/*    .logo img {*/
+/*        width: 200px;*/
+/*        !* Adjust width for smaller mobile view *!*/
+/*    }*/
 
-    .shrink {
-        top: 5px;
-        left: 5px;
-        transform: translate(0, 0) scale(0.1);
-        /* Adjust scale to fit in header */
-    }
+/*    .shrink {*/
+/*        top: 5px;*/
+/*        left: 5px;*/
+/*        transform: translate(0, 0) scale(0.1);*/
+/*        !* Adjust scale to fit in header *!*/
+/*    }*/
 
-    .content {
-        padding-top: 50px;
-        /* Adjust space for the fixed header on smaller mobile */
-    }
-}
+/*    .content {*/
+/*        padding-top: 50px;*/
+/*        !* Adjust space for the fixed header on smaller mobile *!*/
+/*    }*/
+/*}*/
