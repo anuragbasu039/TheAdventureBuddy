@@ -23,17 +23,17 @@ const NewsSection = () => {
   return (
     <div className={styles["news-container"]}>
       <div className={styles["slider-container"]}>
-        <Slider {...settings}>
-          <div className={styles.slide}>
-             {/* <img src={logo4} alt="Slide 1" /> */}
-          </div>
-          <div className={styles.slide}>
-             {/* <img src={logo5} alt="Slide 2" /> */}
-          </div>
-          <div className={styles.slide}>
-             {/* <img src={logo6} alt="Slide 3" /> */}
-          </div>
-        </Slider>
+        {/*<Slider {...settings}>*/}
+        {/*  <div className={styles.slide}>*/}
+        {/*      <img src={logo4} alt="Slide 1" />*/}
+        {/*  </div>*/}
+        {/*  <div className={styles.slide}>*/}
+        {/*      <img src={logo5} alt="Slide 2" />*/}
+        {/*  </div>*/}
+        {/*  <div className={styles.slide}>*/}
+        {/*      <img src={logo6} alt="Slide 3" />*/}
+        {/*  </div>*/}
+        {/*</Slider>*/}
       </div>
       <div className={styles["text-section"]}>
         <p>What's Happening</p>

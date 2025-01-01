@@ -4,7 +4,7 @@
     justify-content: space-between; /* Adjusts to space between logo and links */
     align-items: center;
     padding: 10px 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed; /* Fixes the navbar at the top */
@@ -14,10 +14,12 @@
     z-index: 1000; /* Ensures the navbar stays above other content */
     width: 55%;
     border-radius: 50px;
+    backdrop-filter: blur(10px); /* Creates the glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
 
 .logo img {
-    width: 60px;
+    width: 100px;
     height: 60px;
 }
 
@@ -33,6 +35,7 @@
     color: black;
     text-decoration: none;
 }
+
 /* Dropdown styles */
 .nav-link.dropdown {
     position: relative;
@@ -64,7 +67,6 @@
 .dropdown-item:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
-
 
 .nav-link.login-button {
     background-color: #007BFF; /* Blue background for the login button */
@@ -124,8 +126,8 @@
     }
 
     .logo img {
-        width: 40px; /* Adjusted logo size for mobile view */
-        height: 40px;
+        width: 100px; /* Adjusted logo size for mobile view */
+        height: 60px;
     }
 
     .menu-toggle {

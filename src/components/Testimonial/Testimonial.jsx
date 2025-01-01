@@ -71,13 +71,12 @@ function App() {
                         objectFit: 'cover',
                         display: 'block',
                         margin: '0 auto',
-                        marginTop:'80px',
+                        marginTop: '80px',
                         borderRadius: '50%',
-
                       }}
                   />
                   <div className={styles["testimonial-description"]}>
-                    <h3>{slide.name}</h3>
+                    <h3 className={styles["testimonial-name"]}>{slide.name}</h3>
                     <p className={styles["testimonial-role"]}>{slide.role}</p>
                     <p className={styles["testimonial-text"]}>{slide.text}</p>
                   </div>

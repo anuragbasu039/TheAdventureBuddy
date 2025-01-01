@@ -4,7 +4,8 @@ import './Team.css';
 import Founder from '../../assets/Farhan.JPG'
 import CEO from '../../assets/arbaz.jpg'
 import CFO from '../../assets/Atik.JPG'
-
+import TL from '../../assets/arqam.webp'
+import Anurag from '../../assets/anurag.png'
 // eslint-disable-next-line react/prop-types
 const TeamCard = ({ name, title, image, linkedin, className }) => {
     return (
@@ -30,23 +31,38 @@ function App() {
             name: 'Farhan Hashmi',
             title: 'Founder & CEO',
             image: Founder,
-            // linkedin: 'https://linkedin.com/in/farhan-hashmi-29460023b/',
+            linkedin: 'https://www.linkedin.com/in/mohd-farhan-29460023b/',
             className: '',
         },
         {
             name: 'Arbaz Khan',
             title: 'CEO',
             image: CEO,
-            // linkedin: 'https://www.linkedin.com/in/arbaz-khan-b063171ab/',
+            linkedin: 'https://www.linkedin.com/in/arbaz-khan-b063171ab/',
             className: 'middle-card',
         },
         {
             name: 'Atik Uddin',
             title: 'CFO',
             image: CFO,
-            // linkedin: 'https://www.linkedin.com/in/atik',
+            linkedin: 'https://www.linkedin.com/in/atik',
+            className: '',
+        },
+        {
+            name: 'Arqam Ahmad Siddiqui',
+            title: 'Technical Lead',
+            image: TL,
+            linkedin: 'https://www.linkedin.com/in/arqam365/',
+            className: '',
+        },
+        {
+            name: 'Anurag Bose',
+            title: 'Web Developer',
+            image: Anurag,
+            linkedin: 'https://www.linkedin.com/in/anuragbose039/',
             className: '',
         }
+
     ];
 
     return (

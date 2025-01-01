@@ -2,18 +2,26 @@
 import React from 'react';
 import styles from './Risingwanderer.module.css';
 import image1 from '../../assets/Rope Climbing.jpg'
-import Footer from '../../components/Footer/Footer';
+import image2 from '../../assets/archery.png'
+import image3 from '../../assets/balance bridge.png'
+import image4 from '../../assets/burma bridge.png'
+import image5 from '../../assets/commando net.png'
+import image6 from '../../assets/monkey crawl.png'
+import image7 from '../../assets/plank walk.png'
+import image8 from '../../assets/Rappeling.png'
+import image9 from '../../assets/Tyre Wall.png'
+import Footer from '../../components/Footer/Footer.jsx';
 const TripGrid = () => {
     const trips = [
         { id: 1, image: image1 },
-        { id: 2, image: image1 },
-        { id: 3, image: image1 },
-        { id: 4, image: image1 },
-        { id: 5, image: image1 },
-        { id: 6, image: image1 },
-        { id: 7, image: image1 },
-        { id: 8, image: image1 },
-        { id: 9, image: image1 }
+        { id: 2, image: image2 },
+        { id: 3, image: image3 },
+        { id: 4, image: image4 },
+        { id: 5, image: image5 },
+        { id: 6, image: image6 },
+        { id: 7, image: image7 },
+        { id: 8, image: image8 },
+        { id: 9, image: image9 }
     ];
 
     return (

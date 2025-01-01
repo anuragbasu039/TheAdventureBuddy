@@ -14,11 +14,17 @@
 
 
 .testimonial-description {
-    color: white; /* Ensure the description text is white */
+    padding: 20px; /* Add some padding to the container */
+    margin-left: 15px; /* Add margin on the left */
+    margin-right: 15px; /* Add margin on the right */
 }
 
+
 .testimonial-role {
-    color: white; /* Make role text white */
+    color: black; /* Make role text white */
+}
+.testimonial-name {
+    color: black; /* Make role text white */
 }
 
 .testimonial-text {
