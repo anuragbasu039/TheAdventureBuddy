@@ -22,7 +22,7 @@ const ActivitiesSection = () => {
                     <img id='school' src={schoolcamp} alt="School Camp" />
                      {/*<p>School Camp</p> */}
                 </a>
-                <a href="/activities/outdoorcamp" className={styles["activity-card"]}>
+                <a href="/activities/rising" className={styles["activity-card"]}>
                     <img src={outdoorcamp} alt="Outdoor Camp" />
                     {/* <p>Outdoor Camp</p> */}
                 </a>

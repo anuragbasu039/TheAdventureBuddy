@@ -5,12 +5,26 @@
     justify-content: space-between;
     padding: 2rem;
     height: 100vh;
-    background-color: #f9f9f9;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/adventurebuddy-tab-web.appspot.com/o/bglogin.png?alt=media&token=01557208-1e9f-43cf-b9ac-692d5f442f87') ;
     background-size: cover;
     background-position: center;
     margin-top: 10%;
     position: relative; /* Ensure it works well with absolute positioning inside */
 }
+
+
+.testimonial-description {
+    color: white; /* Ensure the description text is white */
+}
+
+.testimonial-role {
+    color: white; /* Make role text white */
+}
+
+.testimonial-text {
+    color: white; /* Make the testimonial text white */
+}
+
 
 .text-contents p {
     display: flex;
@@ -27,8 +41,8 @@
 .image-slider {
     width: 30%;
     height: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
-    /* margin-right: 200px; */
+    background-color: #2e9cca;
+    border-radius: 10%;
 }
 
 

@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
 }
 
 .services {
     margin: 20px 0;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 0; /* Removed margin-left to prevent overflow */
 }
 
 h2 {
@@ -23,7 +24,8 @@ h2 {
     align-items: flex-start;
     margin-bottom: 20px;
     text-align: left;
-    width: 80%;
+    width: 100%; /* Ensures the width doesn't exceed container */
+    box-sizing: border-box; /* Prevents overflow due to padding/margins */
 }
 
 .service img {
@@ -43,7 +45,7 @@ h2 {
 }
 
 /* Responsive Styling */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .services {
         margin-left: 0;
         text-align: center;
@@ -53,7 +55,7 @@ h2 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 100%;
+        width: 100%; /* Prevent overflow on medium screens */
     }
 
     .service img {
@@ -69,9 +71,43 @@ h2 {
     }
 }
 
+/* Small devices (tablets and below) */
+@media (max-width: 768px) {
+    .services {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Prevent overflow on small screens */
+    }
+
+    .service img {
+        margin-bottom: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .service h3 {
+        font-size: 14px;
+    }
+
+    .service p {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Extra small devices (mobile phones) */
 @media (max-width: 480px) {
     h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .service h3 {
@@ -83,7 +119,19 @@ h2 {
     }
 
     .service img {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 8px;
     }
+
+    .service {
+        margin-bottom: 15px;
+        width: 100%; /* Ensure the service items take full width */
+    }
+}
+
+/* Prevent overflow and horizontal scroll */
+body, html {
+    overflow-x: hidden; /* This will prevent any horizontal scrolling */
+    width: 100%;
 }

@@ -12,10 +12,11 @@ import Navbar from '../../components/Navbar/Navbar.jsx'
 import Testimonial from '../../components/Testimonial/Testimonial.jsx'
 import BrandSlider from '../../components/Brandslider/Brandslider.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+// import Logotransition from '../../components/Logotransition/Logotransition.jsx'
 function Home() {
     return (
         <div>
-            {/* <Logotransition /> */}
+            {/*<Logotransition />*/}
             <Navbar/>
             <Header />
             <HeroSection />

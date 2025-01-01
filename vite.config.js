@@ -9,6 +9,7 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: './index.html',
+
     },
   },
 })
